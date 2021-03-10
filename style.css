@@ -118,7 +118,7 @@ button>#arrow {
 }
 
 /* === Form Error === */
-button:hover {
+button:active {
   transform: scale(1.2);
   background: linear-gradient(135deg, hsl(0, 62%, 84%), hsl(0, 50%, 79%));
   box-shadow: 0 10px 20px 2px hsl(0, 25%, 77%);

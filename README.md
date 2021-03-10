@@ -19,8 +19,8 @@ The users should be able to:
   - The email address is not formatted correctly
 
 ## Completed the challenge using
-<li>
-<ul>HTML</ul>
-<ul>CSS</ul>
-<ul>JS</ul>
-</li>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+</ul>

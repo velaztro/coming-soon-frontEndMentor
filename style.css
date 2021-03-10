@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 100%;
+}
+
+html, body {
+  height: 100%;
+  background-color: rgb(250, 250, 250);
+}
+
+/* === Grid === */
+.item0 {grid-area: header; align-self: center;}
+.item1 {grid-area: main; justify-self: center;}
+.item2 {grid-area: img;}
+.item3 {grid-area: footer; align-self: center;}
+
+.container {
+  display: grid;
+  grid-template-areas: ". header ." "img img img" ". main ." "footer footer footer";
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 10% 40% auto 5%;
+  width: 100%;
+  height: 100%;
+}
+
+/* === Logo === */
+#title img {
+  width: 35%;
+}
+
+/* === Hero Area === */
+#img {
+  display: block;
+  background-image: url("./images/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  height: 100%;
+}
+
+/* === Text Area === */
+.text {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#thin {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+  font-size: 12vw;
+  letter-spacing: 3vw;
+}
+
+#bold {
+  color: hsl(0, 6%, 24%);
+  font-weight: 600;
+  font-size: 12vw;
+  letter-spacing: 3vw;
+}
+
+#p {
+  color: hsl(0, 36%, 70%);
+  font-weight: 400;
+  font-size: 3.6vw;
+  line-height: 7vw;
+  margin: 4% 0;
+  margin-bottom: 10%;
+}
+
+/* === Form Area === */
+.email {
+  display: flex;
+  justify-content: space-between;
+  height: 13vw;
+  border-radius: 50px;
+  padding-left: 10%;
+  font-size: 4vw;
+  background-color: transparent;
+  outline: 0;
+  border: 1px solid #c9c9c9;
+  cursor: pointer;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  width: 100%;
+  font-size: 3.5vw;
+}
+
+input::placeholder {
+  color: #c9c9c9;
+}
+
+button {
+  width: 30%;
+  border-radius: 85px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+button>#arrow {
+  width: 20%;
+  height: 45%;
+}
+
+/* === Form Error === */
+button:hover {
+  transform: scale(1.2);
+  background: linear-gradient(135deg, hsl(0, 62%, 84%), hsl(0, 50%, 79%));
+  box-shadow: 0 10px 20px 2px hsl(0, 25%, 77%);
+}
+.email > #error {
+  display: none;
+  height: 50%;
+  width: 15%;
+  margin: auto;
+  padding-right: 3%;
+}
+.error {
+  display: none;
+}
+#alert {
+  display: none;
+  font-size: 3.2vw;
+  color: hsl(0, 93%, 68%);
+  content: "Please provide a valid email";
+  background-color: transparent;
+  margin-top: 2%;
+}
+
+/* === Footer === */
+footer {
+  font-size: 3vw;
+  text-align: center;
+  margin-bottom: -5%;
+}
+
+/* === Desktop === */
+@media (min-width: 1020px) {
+  html, body {
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .item0 {grid-area: header; align-self: baseline;}
+  .item1 {grid-area: main; justify-self: start;}
+  .item2 {grid-area: img;}
+  .item3 {grid-area: footer; align-self: baseline;}
+
+  .container {
+    display: grid;
+    grid-template-areas: 
+    ".        .    img" 
+    ".      header img" 
+    ".      main   img" 
+    "footer footer img";
+    grid-template-columns: 10% auto 45%;
+    grid-template-rows: 8% 20% auto 3%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #title img {
+    width: 25%;
+  }
+
+  #img {
+    background-image: url("/images/hero-desktop.jpg");
+    background-position: right;
+  }
+
+  .text {
+    height: 60%;
+    width: 80%;
+    text-align: left;
+  }
+  #thin {
+    font-size: 5vw;
+    letter-spacing: 1.5vw;
+  }
+  #bold {
+    font-size: 5vw;
+    letter-spacing: 1.5vw;
+  }
+  #p {
+    font-size: 1.3vw;
+    line-height: 180%;
+    margin: 8% 0;
+    margin-top: 5%;
+  }
+
+  .email {
+    height: 4vw;
+    width: 100%;
+    border-radius: 50px;
+    padding-left: 2.5vw;
+    font-size: 1vw;
+  }
+  input {
+    width: 100%;
+    font-size: 1.2vw;
+  }
+  button {
+    width: 30%;
+    border-radius: 85px;
+  }
+  button>img {
+    width: 15%;
+    height: 40%;
+  }
+  
+  .email>#error {
+    display: none;
+    height: 60%;
+    width: 10%;
+    margin-right: 2%;
+  }
+  #alert {
+    margin-top: 2%;
+    padding-left: 8%;
+    font-size: 1.2vw;
+    transition: all 0.2s ease;
+  }
+
+  footer {
+    font-size: 1.1vw;
+    text-align: center;
+  }
+}

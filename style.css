@@ -19,9 +19,13 @@ html, body {
 
 .container {
   display: grid;
-  grid-template-areas: ". header ." "img img img" ". main ." "footer footer footer";
+  grid-template-areas: 
+  ". header ." 
+  "img img img" 
+  ". main ."
+  "footer footer footer";
   grid-template-columns: 10% auto 10%;
-  grid-template-rows: 10% 40% auto 5%;
+  grid-template-rows: 10% 40% auto 6%;
   width: 100%;
   height: 100%;
 }
@@ -67,7 +71,7 @@ html, body {
   font-weight: 400;
   font-size: 3.6vw;
   line-height: 7vw;
-  margin: 4% 0;
+  margin-top: 5%;
   margin-bottom: 10%;
 }
 
@@ -143,7 +147,6 @@ button:hover {
 footer {
   font-size: 3vw;
   text-align: center;
-  margin-bottom: -5%;
 }
 
 /* === Desktop === */

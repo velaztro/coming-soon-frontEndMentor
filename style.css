@@ -242,3 +242,11 @@ footer {
     text-align: center;
   }
 }
+
+@media (max-width: 600px) and (max-height: 800px) {
+  .text {
+    margin-top: 15%;
+    margin-bottom: 10%;
+  }
+
+}

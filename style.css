@@ -187,14 +187,14 @@ footer {
     height: 60%;
     width: 75%;
     text-align: left;
-    margin-top: 3%;
+    margin-top: 2%;
   }
   #thin {
-    font-size: 4.1vw;
+    font-size: 4.35vw;
     letter-spacing: 1.5vw;
   }
   #bold {
-    font-size: 4.2vw;
+    font-size: 4.35vw;
     letter-spacing: 1.5vw;
   }
   #p {
